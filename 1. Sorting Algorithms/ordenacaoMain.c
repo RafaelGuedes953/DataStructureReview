@@ -2,7 +2,7 @@
 	Name: ordenacaoMain
 	Author: Rafael Guedes
 	Date: 02/01/23 17:16
-	Description: Código principal para teste dos algoritmos de ordenação
+	Description: Codigo principal para teste dos algoritmos de ordenacao
 */
 
 #include <stdio.h>

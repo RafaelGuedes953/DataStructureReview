@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "vetores.h": "c",
+        "sort.h": "c"
+    }
+}
