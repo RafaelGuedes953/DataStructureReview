@@ -50,3 +50,6 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Vscode files
+1. Sorting Algorithms/.vscode/launch.json

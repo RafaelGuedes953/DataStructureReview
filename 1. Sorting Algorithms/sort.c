@@ -60,7 +60,7 @@ void insertion_sort(int *v, int n){
 	print_vetor(v,n);
 }
 
-// utilizado para valores uniformemente distribuídos
+// utilizado para valores uniformemente distribuï¿½dos
 void bucket_sort(int *v, int n){
 	int i,j;
 	Bucket b[num_bucket];
@@ -83,7 +83,7 @@ void bucket_sort(int *v, int n){
 	}
 	
 	/*printf("--------ini_teste--------");
-	// verificar divisão dos baldes
+	// verificar divisï¿½o dos baldes
 	for(i=0;i<num_bucket;i++){
 		print_vetor(b[i].balde,b[i].topo);
 		printf("\n");
@@ -95,7 +95,7 @@ void bucket_sort(int *v, int n){
 		if(b[i].topo)
 			bubble_sort(b[i].balde,b[i].topo);
 		
-	//põe os elementos dos baldes de volta no vetor
+	//insere os elementos dos baldes de volta no vetor
 	for(j=0;j<num_bucket;j++)
 		for(i=0;i<b[j].topo;i++)
 			v[i]=b[j].balde[i];
@@ -111,7 +111,7 @@ void count_sort(int *v, int n){
 			max = v[i];
 
   	// O tamanho de count deve ser pelo menos (max+1)
-	int count[10]; // Ficaria melhor usando alocação dinâmica
+	int count[10]; // Ficaria melhor usando alocacao dinamica
 
 	// Inicializa o vetor count com zeros
 	for (i = 0; i <= max; ++i)
@@ -121,7 +121,7 @@ void count_sort(int *v, int n){
 	for (i = 0; i < n; i++)
 		count[v[i]]++;
 
-	// Faz o cálculo cumulativo de cada elemento
+	// Faz o cï¿½lculo cumulativo de cada elemento
 	for (i = 1; i <= max; i++)
 		count[i] += count[i-1];
 
