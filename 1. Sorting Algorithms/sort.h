@@ -27,4 +27,7 @@ void count_sort(int *v, int n);
 void merge(int *v, int esq, int meio, int dir);
 void merge_sort(int *v, int esq, int dir);
 
+int separa(int *v, int ini, int fim);
+void quick_sort(int *v, int ini, int fim);
+
 #endif

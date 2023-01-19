@@ -139,7 +139,6 @@ void count_sort(int *v, int n){
 	print_vetor(v,n);
 }
 
-
 /* Algoritmos para MergeSort*/
 void merge(int *v, int esq, int meio, int dir){
     int i, j, k; // contadoras
@@ -201,4 +200,27 @@ void merge_sort(int *v, int esq, int dir){
 	//printf("valores arrumando\n");
 	//print_vetor(v,dir+1);
 }
-    
+
+/* Algoritmos para QuickSort*/
+int separa(int *v, int ini, int fim){
+	int pivot = v[fim];
+	int i = (ini - 1);
+
+	for (int j = ini; j <= fim- 1; j++) {
+		if (v[j] <= pivot){
+			i++;
+			troca_n(&v[i], &v[j]);
+		}
+	}
+	troca_n(&v[i + 1], &v[fim]); 
+	return (i + 1); 
+}
+
+void quick_sort(int *v, int ini, int fim){
+	if (ini < fim){
+		int pi = separa(v, ini, fim);
+		quick_sort(v, ini, pi - 1);
+		quick_sort(v, pi + 1, fim);
+	}
+	print_vetor(v,fim+1);
+}

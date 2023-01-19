@@ -20,7 +20,8 @@ int main(){
 	//insertion_sort(v,TAM);
 	//bucket_sort(v,TAM);
 	//count_sort(v,TAM);
-	merge_sort(v,0,TAM-1);
+	//merge_sort(v,0,TAM-1);
+	quick_sort(v,0,TAM-1);
 	
 	return 0;
 }
