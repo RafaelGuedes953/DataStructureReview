@@ -24,4 +24,7 @@ void insertion_sort(int *v, int n);
 void bucket_sort(int *v, int n);
 void count_sort(int *v, int n);
 
+void merge(int *v, int esq, int meio, int dir);
+void merge_sort(int *v, int esq, int dir);
+
 #endif

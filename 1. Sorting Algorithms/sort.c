@@ -60,7 +60,7 @@ void insertion_sort(int *v, int n){
 	print_vetor(v,n);
 }
 
-// utilizado para valores uniformemente distribu�dos
+// utilizado para valores uniformemente distribuidos
 void bucket_sort(int *v, int n){
 	int i,j;
 	Bucket b[num_bucket];
@@ -83,7 +83,7 @@ void bucket_sort(int *v, int n){
 	}
 	
 	/*printf("--------ini_teste--------");
-	// verificar divis�o dos baldes
+	// verificar divisao dos baldes
 	for(i=0;i<num_bucket;i++){
 		print_vetor(b[i].balde,b[i].topo);
 		printf("\n");
@@ -139,3 +139,66 @@ void count_sort(int *v, int n){
 	print_vetor(v,n);
 }
 
+
+/* Algoritmos para MergeSort*/
+void merge(int *v, int esq, int meio, int dir){
+    int i, j, k; // contadoras
+	int t_esq = meio - esq + 1; // tamanho do sub-array esquerdo
+	int t_dir =  dir - meio; // tamanho do sub-array direito
+	int L[t_esq], R[t_dir]; // arrays temporários
+
+	/* Copiar dados para os arrays temporários L[] e R[] */
+	for(i = 0; i < t_esq; i++)
+		L[i] = v[esq+i];
+
+	for(j = 0; j < t_dir; j++)
+		R[j] = v[meio+1+j];
+
+	// Mesclar os arrays temporários de volta no v[esq..dir]
+	i = 0; // índice inicial do sub-array esquerdo
+	j = 0; // índice inicial do sub-array direito
+	k = esq; // índice inicial do array mesclado
+
+	while (i < t_esq && j < t_dir){
+		if (L[i] <= R[j]){
+			v[k] = L[i];
+			i++;
+		}
+		else{
+			v[k] = R[j];
+			j++;
+		}
+		k++;
+	}
+
+	/* Apenas um dos whiles abaixo roda para unir 
+		os valores restantes, seja de L ou de R*/
+	
+	while (i < t_esq){ // Copiar os elementos restantes de L[]
+		v[k] = L[i];
+		i++;
+		k++;
+	}
+	
+	while (j < t_dir){ // Copiar os elementos restantes de R[]
+		v[k] = R[j];
+		j++;
+		k++;
+	}
+}
+
+void merge_sort(int *v, int esq, int dir){
+	int meio;
+	//printf("recursao esq=%d dir=%d\n",esq,dir);
+	if (esq >= dir) 
+		return;
+    meio = (esq+dir)/2;
+	//printf("valores dividindo\n");
+	//print_vetor(v,dir+1);
+    merge_sort(v, esq, meio);
+    merge_sort(v, meio+1, dir);
+    merge(v, esq, meio, dir);
+	//printf("valores arrumando\n");
+	//print_vetor(v,dir+1);
+}
+    

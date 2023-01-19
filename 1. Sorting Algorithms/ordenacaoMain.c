@@ -16,10 +16,11 @@ int main(){
 	cria_vetor(v,TAM);
 	//cria_vetor_r(v,TAM,10);
 	//bubble_sort(v,TAM);
-	selection_sort(v,TAM);
+	//selection_sort(v,TAM);
 	//insertion_sort(v,TAM);
 	//bucket_sort(v,TAM);
 	//count_sort(v,TAM);
+	merge_sort(v,0,TAM-1);
 	
 	return 0;
 }
