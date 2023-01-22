@@ -13,8 +13,8 @@ Este repositório foi criado para a prática e revisão de estudos relacionados 
 - Quick Sort
 
 ### Estruturas de dados
-- Fila (adicionar)
-- Pilha (adicionar)
+- Fila
+- Pilha
 - Listas Simplesmente Encadeadas (adicionar)
 - Listas Duplamente Encadeadas (adicionar)
 - Listas Circulares (adicionar)
