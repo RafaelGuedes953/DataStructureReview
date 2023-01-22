@@ -8,11 +8,18 @@
 #include <stdio.h>
 #include "menu.h"
 #include "fila.h"
+#include "pilha.h"
 
 int main(){
-    
-    Fila *f = cria_fila();
+    // Teste de fila
+    //LFP *f = cria_lfp();
+    //menu_fila(f);
+    //free(f);
 
-    menu_fila(f);
+	// Teste de pilha
+	LFP *p = cria_lfp();
+	menu_pilha(p);
+	free(p);
+	
     return 0;
 }

@@ -11,6 +11,7 @@
 #include "menu.c"
 #include "fila.h"
 
-void menu_fila(Fila *f); // Menu para estruturas do tipo Fila
+//void menu_fila(LFP *f); // Menu para estruturas do tipo Fila
+void menu_pilha(LFP *p); // Menu para estruturas do tipo Pilha
 
 #endif
