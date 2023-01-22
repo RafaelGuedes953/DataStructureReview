@@ -9,3 +9,12 @@ Este repositório foi criado para a prática e revisão de estudos relacionados 
 - Insertion Sort
 - Counting Sort
 - Bucket Sort
+- Merge Sort
+- Quick Sort
+
+### Estruturas de dados
+- Fila (adicionar)
+- Pilha (adicionar)
+- Listas Simplesmente Encadeadas (adicionar)
+- Listas Duplamente Encadeadas (adicionar)
+- Listas Circulares (adicionar)
